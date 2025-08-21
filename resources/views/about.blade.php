@@ -227,10 +227,10 @@
                 <a href="{{ route('contact.index') }}" class="bear-button">
                     Contact Me
                 </a>
-                <a href="{{ asset('Joseph-Caswell-Resume.pdf') }}" target="_blank" class="bear-button-secondary">
+                <a href="{{ asset('downloads/Joseph-Caswell-Resume.pdf') }}" target="_blank" class="bear-button-secondary">
                     Download Resume (PDF)
                 </a>
-                <a href="{{ asset('Joseph-Caswell-Resume.html') }}" target="_blank" class="bear-button-secondary">
+                <a href="{{ asset('downloads/Joseph-Caswell-Resume.html') }}" target="_blank" class="bear-button-secondary">
                     View Resume (HTML)
                 </a>
             </div>

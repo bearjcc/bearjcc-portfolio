@@ -19,67 +19,87 @@
 
     <!-- Projects Content -->
     <section class="max-w-6xl mx-auto px-4 pb-20">
-        <!-- Coming Soon Message -->
-        <div class="bear-card-elevated p-12 text-center">
-            <div class="mb-8">
-                <svg class="w-24 h-24 mx-auto text-white/60 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                </svg>
-            </div>
-            <h2 class="text-heading mb-4">Portfolio Coming Soon</h2>
-            <p class="text-body text-white/70 mb-8 max-w-2xl mx-auto">
-                I'm currently preparing my project portfolio. Each project will showcase different technologies, 
-                problem-solving approaches, and the development process behind the final product.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="{{ route('articles.index') }}" class="bear-button">
-                    Read My Blog
-                </a>
-                <a href="{{ route('contact.index') }}" class="bear-button-secondary">
-                    Discuss Collaboration
-                </a>
+        <!-- Featured Project -->
+        <div class="mb-16">
+            <h2 class="text-heading mb-8 text-center">Featured Project</h2>
+            <div class="bear-card-elevated p-8">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-2/3">
+                        <div class="mb-4">
+                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full">AutoHotkey</span>
+                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full ml-2">Windows Automation</span>
+                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full ml-2">Productivity</span>
+                        </div>
+                        <h3 class="text-heading mb-4">Windows Productivity Scripts</h3>
+                        <p class="text-body text-white/70 mb-6">
+                            A collection of AutoHotkey scripts designed to enhance Windows productivity and workflow efficiency. 
+                            These scripts automate repetitive tasks, provide quick access to common functions, and improve 
+                            the overall user experience on Windows systems.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <h4 class="text-subheading text-bear-gold">Scripts Included:</h4>
+                            <ul class="space-y-2 text-body text-white/70">
+                                <li>• <strong>Media Control.ahk</strong> - Quick media playback controls</li>
+                                <li>• <strong>Engineering Symbols.ahk</strong> - Fast insertion of engineering symbols</li>
+                                <li>• <strong>Greek Letters.ahk</strong> - Quick typing of Greek alphabet characters</li>
+                                <li>• <strong>Hidden Files.ahk</strong> - Toggle hidden file visibility</li>
+                                <li>• <strong>Win Scroll Volume.ahk</strong> - Volume control via mouse wheel</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="{{ asset('downloads/Media Control.ahk') }}" download class="bear-button">
+                                Download Scripts
+                            </a>
+                            <a href="{{ route('contact.index') }}" class="bear-button-secondary">
+                                Request Custom Script
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3">
+                        <div class="bg-white/5 p-6 rounded-lg">
+                            <h4 class="text-subheading text-bear-gold mb-4">Technical Details</h4>
+                            <div class="space-y-3 text-body text-white/70">
+                                <div>
+                                    <span class="font-semibold">Language:</span> AutoHotkey v1.1
+                                </div>
+                                <div>
+                                    <span class="font-semibold">Platform:</span> Windows 10/11
+                                </div>
+                                <div>
+                                    <span class="font-semibold">License:</span> MIT (Free to use)
+                                </div>
+                                <div>
+                                    <span class="font-semibold">Size:</span> ~3KB total
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Future Project Structure Preview -->
-        <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Sample Project Card 1 -->
-            <div class="bear-card p-6">
-                <div class="mb-4">
-                    <span class="text-caption bg-white/10 px-3 py-1 rounded-full">Laravel</span>
-                    <span class="text-caption bg-white/10 px-3 py-1 rounded-full ml-2">Vue.js</span>
+        <!-- More Projects Coming Soon -->
+        <div class="mt-16">
+            <h2 class="text-heading mb-8 text-center">More Projects Coming Soon</h2>
+            <div class="bear-card-elevated p-8 text-center">
+                <div class="mb-6">
+                    <svg class="w-16 h-16 mx-auto text-white/60 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                    </svg>
                 </div>
-                <h3 class="text-subheading mb-3">E-Commerce Platform</h3>
-                <p class="text-body text-white/70 mb-4">
-                    A full-stack e-commerce solution with advanced features, payment integration, and admin dashboard.
+                <h3 class="text-subheading mb-4">Portfolio in Development</h3>
+                <p class="text-body text-white/70 mb-6 max-w-2xl mx-auto">
+                    I'm actively working on documenting and showcasing more of my projects. Each project will include 
+                    detailed descriptions, technical challenges, and the development process behind the final product.
                 </p>
-                <div class="text-caption">Coming Soon</div>
-            </div>
-
-            <!-- Sample Project Card 2 -->
-            <div class="bear-card p-6">
-                <div class="mb-4">
-                    <span class="text-caption bg-white/10 px-3 py-1 rounded-full">React</span>
-                    <span class="text-caption bg-white/10 px-3 py-1 rounded-full ml-2">Node.js</span>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="{{ route('articles.index') }}" class="bear-button">
+                        Read My Blog
+                    </a>
+                    <a href="{{ route('contact.index') }}" class="bear-button-secondary">
+                        Discuss Collaboration
+                    </a>
                 </div>
-                <h3 class="text-subheading mb-3">Task Management App</h3>
-                <p class="text-body text-white/70 mb-4">
-                    A collaborative project management tool with real-time updates and team collaboration features.
-                </p>
-                <div class="text-caption">Coming Soon</div>
-            </div>
-
-            <!-- Sample Project Card 3 -->
-            <div class="bear-card p-6">
-                <div class="mb-4">
-                    <span class="text-caption bg-white/10 px-3 py-1 rounded-full">Python</span>
-                    <span class="text-caption bg-white/10 px-3 py-1 rounded-full ml-2">Machine Learning</span>
-                </div>
-                <h3 class="text-subheading mb-3">Data Analysis Dashboard</h3>
-                <p class="text-body text-white/70 mb-4">
-                    An interactive dashboard for visualizing complex datasets with machine learning insights.
-                </p>
-                <div class="text-caption">Coming Soon</div>
             </div>
         </div>
 
