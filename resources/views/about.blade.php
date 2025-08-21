@@ -177,6 +177,37 @@
             </div>
         </div>
 
+        <!-- Eagle Scout Project -->
+        <div class="mb-12">
+            <h2 class="text-heading mb-8 text-center">Eagle Scout Project</h2>
+            <div class="bear-card-elevated p-8">
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-subheading text-bear-gold mb-4">Leadership & Community Service</h3>
+                        <p class="text-body text-white/70 mb-6">
+                            As an Eagle Scout, I demonstrated exceptional leadership skills by planning, organizing, and executing 
+                            a community service project that benefited my local community. This achievement represents the highest 
+                            rank in Boy Scouts and showcases my ability to lead teams, manage complex projects, and make a 
+                            positive impact in my community.
+                        </p>
+                        <div class="aspect-video w-full max-w-2xl mx-auto">
+                            <iframe 
+                                width="100%" 
+                                height="100%" 
+                                src="https://www.youtube.com/embed/V7WxxTyeoNY?si=2WUugOPD_svK_qWU" 
+                                title="Eagle Scout Project Video" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen
+                                class="rounded-lg">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Education & Certifications -->
         <div class="mb-12">
             <h2 class="text-heading mb-8 text-center">Education & Certifications</h2>
