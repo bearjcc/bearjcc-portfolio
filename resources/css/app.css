@@ -79,22 +79,34 @@
 
 .circle {
     position: absolute;
-    background: white;
+    width: 1px;
+    height: 1px;
     border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3);
     opacity: 0.8;
 }
 
 .circle-animate {
     position: absolute;
-    background: white;
+    width: 1px;
+    height: 1px;
     border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3);
     opacity: 0.8;
-    animation: blink 3s infinite;
+    animation: blink 3s infinite alternate ease-in-out;
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 0.8; }
-    50% { opacity: 0.2; }
+    from {
+        opacity: 1;
+        background-color: rgb(255, 248, 154);
+    }
+    to {
+        opacity: 0.1;
+        background-color: white;
+    }
 }
 
 /* Custom BearJCC Styles */
