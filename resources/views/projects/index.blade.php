@@ -79,6 +79,62 @@
                 </div>
             </div>
 
+            <!-- Sudoku Game Project -->
+            <div class="bear-card-elevated p-8 mb-12">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-2/3">
+                        <div class="mb-4">
+                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full">PHP</span>
+                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full ml-2">JavaScript</span>
+                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full ml-2">jQuery</span>
+                        </div>
+                        <h3 class="text-heading mb-4">Interactive Sudoku Game</h3>
+                        <p class="text-body text-white/70 mb-6">
+                            A fully functional Sudoku game built with PHP and JavaScript. Features an interactive 9x9 grid 
+                            with intelligent puzzle generation, validation, and a user-friendly interface. Players can solve 
+                            puzzles with multiple difficulty levels and track their progress.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <h4 class="text-subheading text-bear-gold">Features:</h4>
+                            <ul class="space-y-2 text-body text-white/70">
+                                <li>• <strong>Interactive Grid</strong> - Click and right-click functionality for number placement</li>
+                                <li>• <strong>Puzzle Generation</strong> - Dynamic puzzle creation with varying difficulty levels</li>
+                                <li>• <strong>Real-time Validation</strong> - Instant feedback on number placement and conflicts</li>
+                                <li>• <strong>Responsive Design</strong> - Works seamlessly on desktop and mobile devices</li>
+                                <li>• <strong>Progress Tracking</strong> - Visual indicators for completed sections and rows</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="{{ asset('sudoku/index.php') }}" target="_blank" class="bear-button">
+                                Play Sudoku Game
+                            </a>
+                            <a href="{{ route('contact.index') }}" class="bear-button-secondary">
+                                Request Custom Game
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3">
+                        <div class="bg-white/5 p-6 rounded-lg">
+                            <h4 class="text-subheading text-bear-gold mb-4">Technical Details</h4>
+                            <div class="space-y-3 text-body text-white/70">
+                                <div>
+                                    <span class="font-semibold">Backend:</span> PHP
+                                </div>
+                                <div>
+                                    <span class="font-semibold">Frontend:</span> JavaScript + jQuery
+                                </div>
+                                <div>
+                                    <span class="font-semibold">License:</span> MIT (Free to use)
+                                </div>
+                                <div>
+                                    <span class="font-semibold">Size:</span> ~21KB
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- AutoHotkey Scripts Project -->
             <div class="bear-card-elevated p-8">
                 <div class="flex flex-col lg:flex-row gap-8">
