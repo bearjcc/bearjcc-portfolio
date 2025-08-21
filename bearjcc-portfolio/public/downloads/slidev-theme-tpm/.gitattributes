@@ -1,0 +1,6 @@
+# Set default behavior for tabs and line endings in files
+*.js text indent=tab eol=crlf
+*.ts text indent=tab eol=crlf
+*.vue text indent=tab eol=crlf
+*.css text indent=tab eol=crlf
+*.md text indent=space eol=crlf
