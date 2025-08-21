@@ -1,0 +1,183 @@
+/* layouts available:
+
+center
+cover
+default
+end
+fact
+full
+iframe, iframe-left, iframe-right
+image, image-left, image-right
+intro
+none
+quote
+section
+statement
+two-cols, two-cols-header
+
+*/
+
+:root {
+  --tpm-blue: #00AEEF;
+  --tpm-grey: #888888;
+
+  --branding-width: calc(2.58 / 13.33 * 100%);
+  --branding-height: calc(.33 / 7.5 * 100%);
+
+  --logo-image: url('../assets/tpm_logo_color.png');
+  --logo-image-height: 672;
+  --logo-image-width: 1563;
+
+  --logo-height: calc(2 * var(--branding-height));
+  --logo-width: calc(var(--logo-image-width) / var(--logo-image-height) * var(--logo-height));
+}
+
+.slidev-layout {
+  font-size: 1.2rem;
+
+  h1 + p {
+    color: var(--tpm-grey);
+    margin-top: 1em;
+  }
+
+  p + h2, ul + h2, table + h2 {
+    @apply mt-10;
+  }
+
+  p {
+    margin-top: 1.4em;
+  }
+  
+
+  a {
+    text-decoration: none;
+    border-bottom-width: 0;
+  }
+  
+  h1 {
+    @apply text-5xl mb-4 -ml-[0.05em];
+    @apply font-700;
+    color: var(--tpm-blue);
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h3 + h3 {
+    margin-top: 2rem;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  h5 {
+    @apply text-base;
+  }
+
+  h6 {
+    @apply text-sm pt-1 uppercase tracking-widest font-500 -ml-[0.05em];
+  }
+
+  h6:not(.opacity-100) {
+    @apply opacity-40;
+  }
+
+  ol li {
+    @apply mt-2;
+  }
+
+}
+
+/* make a blue box in the top right of the screen */
+div:has( >.slidev-layout)::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: var(--branding-width);
+  height: var(--branding-height);
+  background-color: var(--tpm-blue);
+  z-index: -1;
+}
+
+/* make the logo appear in the bottom left of the screen */
+div:has( >.slidev-layout)::after {
+  @apply absolute bottom-0 left-0 w-full h-10 m-3;
+  content: '';
+  /* width: var(--logo-width); */
+  /* height: var(--logo-height); */
+  background-image: var(--logo-image);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* no logo for cover */
+div:has(.slidev-layout.cover)::after {
+  display: none;
+}
+
+.slidev-layout.cover,
+.slidev-layout.intro {
+  @apply h-full grid;
+
+  /* move up by 5% */
+  transform: translateY(-5%);
+
+  h1 {
+    color: inherit;
+    @apply text-6xl leading-20;
+  }
+}
+
+.slidev-layout.fact {
+  @apply text-center grid h-full;
+  h1 {
+    @apply text-8xl font-700;
+  }
+  h1 + p {
+    @apply font-700 text-2xl;
+  }
+}
+
+.slidev-layout.statement {
+  @apply text-center grid h-full;
+
+  h1 {
+    @apply text-6xl font-700;
+  }
+}
+
+.slidev-layout.quote {
+  @apply grid h-full;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--tpm-blue);
+  }
+
+  h1 + p {
+    @apply mt-2;
+    color: var(--tpm-grey);
+  }
+}
+
+.slidev-layout.section {
+  h1 {
+    @apply text-6xl font-500 leading-20;
+  }
+}
+
+.slidev-layout.image {
+  .prop-image {
+    @apply bottom-0 left-30 right-10 absolute;
+    max-height: 80%;
+    height: revert-layer;
+  }
+}
+

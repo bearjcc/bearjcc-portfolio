@@ -1,0 +1,37 @@
+{
+  "name": "slidev-theme-tpm",
+  "version": "1.0.0",
+  "type": "module",
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "slidev": ">=0.19.3"
+  },
+  "scripts": {
+    "build": "slidev build example.md",
+    "dev": "slidev example.md --open",
+    "export-pdf": "slidev export example.md"
+  },
+  "dependencies": {
+    "@slidev/types": "^0.48.3",
+    "codemirror-theme-vars": "^0.1.2",
+    "prism-theme-vars": "^0.2.4"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^0.48.3",
+    "playwright-chromium": "^1.42.1"
+  },
+  "slidev": {
+    "colorSchema": "light",
+    "highlighter": "all",
+    "defaults": {
+      "fonts": {
+        "sans": "Poppins",
+        "mono": "Fira Code"
+      }
+    }
+  }
+}

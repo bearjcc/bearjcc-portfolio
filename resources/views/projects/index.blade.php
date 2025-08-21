@@ -19,9 +19,67 @@
 
     <!-- Projects Content -->
     <section class="max-w-6xl mx-auto px-4 pb-20">
-        <!-- Featured Project -->
+        <!-- Featured Projects -->
         <div class="mb-16">
-            <h2 class="text-heading mb-8 text-center">Featured Project</h2>
+            <h2 class="text-heading mb-8 text-center">Featured Projects</h2>
+            
+            <!-- Slidev Theme Project -->
+            <div class="bear-card-elevated p-8 mb-12">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-2/3">
+                        <div class="mb-4">
+                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full">Vue.js</span>
+                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full ml-2">TypeScript</span>
+                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full ml-2">Slidev</span>
+                        </div>
+                        <h3 class="text-heading mb-4">TPM Branded Slidev Theme</h3>
+                        <p class="text-body text-white/70 mb-6">
+                            A custom presentation theme for Slidev (slides maker for developers) featuring TPM branding and design elements. 
+                            This theme provides consistent, professional presentation templates with custom layouts, styling, and branding 
+                            for technical presentations and training materials.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <h4 class="text-subheading text-bear-gold">Features:</h4>
+                            <ul class="space-y-2 text-body text-white/70">
+                                <li>• <strong>Custom Layouts</strong> - 15+ specialized slide layouts (cover, center, two-column, image layouts, etc.)</li>
+                                <li>• <strong>TPM Branding</strong> - Integrated company logos, colors, and design elements</li>
+                                <li>• <strong>Code Highlighting</strong> - Syntax highlighting for multiple programming languages</li>
+                                <li>• <strong>Responsive Design</strong> - Optimized for different screen sizes and presentations</li>
+                                <li>• <strong>Export Options</strong> - PDF export and web deployment capabilities</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="{{ asset('downloads/slidev-theme-tpm') }}" download class="bear-button">
+                                Download Theme
+                            </a>
+                            <a href="{{ asset('downloads/slidev-theme-tpm/example-export.pdf') }}" target="_blank" class="bear-button-secondary">
+                                View Example PDF
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3">
+                        <div class="bg-white/5 p-6 rounded-lg">
+                            <h4 class="text-subheading text-bear-gold mb-4">Technical Details</h4>
+                            <div class="space-y-3 text-body text-white/70">
+                                <div>
+                                    <span class="font-semibold">Framework:</span> Vue.js 3 + TypeScript
+                                </div>
+                                <div>
+                                    <span class="font-semibold">Platform:</span> Slidev (Node.js)
+                                </div>
+                                <div>
+                                    <span class="font-semibold">License:</span> Internal (TPM)
+                                </div>
+                                <div>
+                                    <span class="font-semibold">Size:</span> ~2.4MB (with assets)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AutoHotkey Scripts Project -->
             <div class="bear-card-elevated p-8">
                 <div class="flex flex-col lg:flex-row gap-8">
                     <div class="lg:w-2/3">
