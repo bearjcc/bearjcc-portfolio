@@ -6,28 +6,33 @@
 @section('content')
 <div class="min-h-screen">
     <!-- Hero Section -->
-    <section class="text-center py-20 fade-in">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 bear-text-glow">
+    <section class="text-center py-20">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-hero mb-6 bear-text-glow">
                 Get In Touch
             </h1>
-            <p class="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+            <p class="text-body-large text-white/80 max-w-2xl mx-auto">
                 Ready to start your next project? Let's discuss how I can help bring your ideas to life.
             </p>
         </div>
     </section>
 
     <!-- Contact Form Section -->
-    <section class="py-16 fade-in">
-        <div class="max-w-4xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Contact Form -->
-                <div class="bear-card p-8">
-                    <h2 class="text-3xl font-bold mb-6 bear-text-glow">Send a Message</h2>
+    <section class="max-w-6xl mx-auto px-4 pb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div class="bear-card-elevated p-8">
+                <h2 class="text-heading mb-6 bear-text-glow">Send a Message</h2>
                     
                     @if(session('success'))
                         <div class="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
                             <p class="text-green-300">{{ session('success') }}</p>
+                        </div>
+                    @endif
+
+                    @if(session('warning'))
+                        <div class="mb-6 p-4 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">
+                            <p class="text-yellow-300">{{ session('warning') }}</p>
                         </div>
                     @endif
 
@@ -45,30 +50,30 @@
                         @csrf
                         
                         <div>
-                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <label for="name" class="block text-body font-semibold mb-2">Name</label>
                             <input type="text" id="name" name="name" value="{{ old('name') }}" 
-                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-white/40 transition-colors"
+                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-white/40 transition-colors bear-focus"
                                    placeholder="Your name" required>
                         </div>
 
                         <div>
-                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <label for="email" class="block text-body font-semibold mb-2">Email</label>
                             <input type="email" id="email" name="email" value="{{ old('email') }}"
-                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-white/40 transition-colors"
+                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-white/40 transition-colors bear-focus"
                                    placeholder="your.email@example.com" required>
                         </div>
 
                         <div>
-                            <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                            <label for="subject" class="block text-body font-semibold mb-2">Subject</label>
                             <input type="text" id="subject" name="subject" value="{{ old('subject') }}"
-                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-white/40 transition-colors"
+                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-white/40 transition-colors bear-focus"
                                    placeholder="What's this about?" required>
                         </div>
 
                         <div>
-                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <label for="message" class="block text-body font-semibold mb-2">Message</label>
                             <textarea id="message" name="message" rows="6" 
-                                      class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-white/40 transition-colors resize-none"
+                                      class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-white/40 transition-colors resize-none bear-focus"
                                       placeholder="Tell me about your project or how I can help..." required>{{ old('message') }}</textarea>
                         </div>
 
@@ -81,7 +86,7 @@
                 <!-- Contact Information -->
                 <div class="space-y-8">
                     <div class="bear-card p-8">
-                        <h2 class="text-3xl font-bold mb-6 bear-text-glow">Contact Information</h2>
+                        <h2 class="text-heading mb-6 bear-text-glow">Contact Information</h2>
                         <div class="space-y-6">
                             <div class="flex items-start space-x-4">
                                 <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -127,7 +132,7 @@
 
                     <!-- Services Offered -->
                     <div class="bear-card p-8">
-                        <h2 class="text-2xl font-bold mb-6 bear-text-glow">Services I Offer</h2>
+                        <h2 class="text-subheading mb-6 bear-text-glow">Services I Offer</h2>
                         <div class="space-y-4">
                             <div class="flex items-center space-x-3">
                                 <div class="w-2 h-2 bg-white rounded-full"></div>
@@ -161,33 +166,51 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-16 fade-in">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 bear-text-glow">
-                Frequently Asked Questions
-            </h2>
+    <section class="max-w-6xl mx-auto px-4 pb-20">
+        <h2 class="text-heading text-center mb-12 bear-text-glow">
+            Frequently Asked Questions
+        </h2>
             <div class="space-y-6">
                 <div class="bear-card p-6">
-                    <h3 class="text-xl font-bold mb-3">What types of projects do you work on?</h3>
-                    <p class="text-white/80">I specialize in web applications, e-commerce platforms, APIs, and custom software solutions. I work with both startups and established businesses.</p>
+                    <h3 class="text-subheading mb-3">What types of projects do you work on?</h3>
+                    <p class="text-body text-white/70">I specialize in web applications, e-commerce platforms, APIs, and custom software solutions. I work with both startups and established businesses.</p>
                 </div>
 
                 <div class="bear-card p-6">
-                    <h3 class="text-xl font-bold mb-3">What is your typical project timeline?</h3>
-                    <p class="text-white/80">Project timelines vary depending on complexity. Small projects can take 2-4 weeks, while larger applications may take 2-3 months. I'll provide a detailed timeline during our initial consultation.</p>
+                    <h3 class="text-subheading mb-3">What is your typical project timeline?</h3>
+                    <p class="text-body text-white/70">Project timelines vary depending on complexity. Small projects can take 2-4 weeks, while larger applications may take 2-3 months. I'll provide a detailed timeline during our initial consultation.</p>
                 </div>
 
                 <div class="bear-card p-6">
-                    <h3 class="text-xl font-bold mb-3">Do you provide ongoing support?</h3>
-                    <p class="text-white/80">Yes, I offer ongoing maintenance, updates, and support packages to ensure your application continues to perform optimally after launch.</p>
+                    <h3 class="text-subheading mb-3">Do you provide ongoing support?</h3>
+                    <p class="text-body text-white/70">Yes, I offer ongoing maintenance, updates, and support packages to ensure your application continues to perform optimally after launch.</p>
                 </div>
 
                 <div class="bear-card p-6">
-                    <h3 class="text-xl font-bold mb-3">What technologies do you use?</h3>
-                    <p class="text-white/80">I primarily work with Laravel, Vue.js, Tailwind CSS, and modern JavaScript. I also have experience with other frameworks and can recommend the best technology stack for your project.</p>
+                    <h3 class="text-subheading mb-3">What technologies do you use?</h3>
+                    <p class="text-body text-white/70">I primarily work with Laravel, Vue.js, Tailwind CSS, and modern JavaScript. I also have experience with other frameworks and can recommend the best technology stack for your project.</p>
                 </div>
             </div>
         </div>
     </section>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    // Add fade-in animations for the cards
+    document.addEventListener('DOMContentLoaded', function() {
+        const cards = document.querySelectorAll('.bear-card, .bear-card-elevated');
+        cards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                card.style.transition = 'all 0.6s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 200);
+        });
+    });
+</script>
+@endpush
