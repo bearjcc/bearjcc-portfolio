@@ -10,7 +10,8 @@ class ProjectController extends Controller
 {
     public function index(): View
     {
-        $projects = Project::published()->ordered()->get();
+        // TODO: Replace with database query when database is set up
+        $projects = collect([]); // Empty collection for now
         return view('projects.index', compact('projects'));
     }
 

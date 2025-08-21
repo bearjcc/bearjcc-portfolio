@@ -10,7 +10,8 @@ class ArticleController extends Controller
 {
     public function index(): View
     {
-        $articles = Article::published()->latest('published_at')->get();
+        // TODO: Replace with database query when database is set up
+        $articles = collect([]); // Empty collection for now
         return view('articles.index', compact('articles'));
     }
 
