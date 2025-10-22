@@ -1,0 +1,92 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [ master ]  # Change to 'main' if your default branch is main
+  workflow_dispatch:  # Allow manual triggers
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, intl, bcmath, pdo_mysql, zip, curl, xml, gd
+          coverage: none
+
+      - name: Install Composer dependencies
+        run: |
+          composer install --no-dev --prefer-dist --no-interaction --no-progress --optimize-autoloader
+          php artisan config:clear
+          php artisan route:clear
+          php artisan view:clear
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install and build frontend assets
+        run: |
+          npm ci
+          npm run build
+
+      - name: Optimize Laravel
+        run: |
+          composer dump-autoload --optimize
+          php artisan config:cache
+          php artisan route:cache
+          php artisan view:cache
+
+      - name: Clean up development files
+        run: |
+          rm -rf node_modules
+          rm -rf tests
+          rm -rf .github
+          rm -rf .git
+          rm -rf storage/logs/*
+          rm -rf storage/framework/cache/*
+          rm -rf storage/framework/sessions/*
+          rm -rf storage/framework/views/*
+          find . -name "*.log" -delete
+
+      - name: Deploy to Hostinger via rsync
+        uses: burnett01/rsync-deployments@v7.0.1
+        with:
+          switches: -az --delete --exclude=".env" --exclude=".git" --exclude=".github" --exclude="node_modules" --exclude="storage/logs/*" --exclude="tests"
+          path: ./
+          remote_path: ${{ secrets.DEPLOY_PATH }}
+          remote_host: ${{ secrets.HOST }}
+          remote_user: ${{ secrets.SSH_USER }}
+          remote_key: ${{ secrets.SSH_KEY }}
+
+      - name: Post-deploy Laravel tasks
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd ${{ secrets.DEPLOY_PATH }}
+            # Set proper permissions
+            chmod -R 775 storage bootstrap/cache
+            # Run migrations (if needed)
+            php artisan migrate --force || true
+            # Create storage link
+            php artisan storage:link || true
+            # Clear and rebuild caches
+            php artisan config:cache
+            php artisan route:cache
+            php artisan view:cache
+            # Restart PHP-FPM (if available)
+            sudo service php8.3-fpm reload || true
+            echo "Deployment completed successfully!"
