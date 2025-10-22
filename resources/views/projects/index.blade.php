@@ -6,252 +6,131 @@
 @section('content')
 <div class="min-h-screen">
     <!-- Hero Section -->
-    <section class="text-center py-20">
-        <div class="max-w-4xl mx-auto px-4">
-            <h1 class="text-hero mb-6 bear-text-glow">
-                My Projects
-            </h1>
-            <p class="text-body-large text-white/80 max-w-2xl mx-auto">
-                A collection of web applications, websites, and technical solutions that demonstrate my skills and passion for development.
-            </p>
+    <section class="py-24">
+        <div class="technical-container">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 bear-text-glow">
+                    My Projects
+                </h1>
+                <p class="text-technical-subheading max-w-3xl mx-auto">
+                    A collection of web applications, websites, and technical solutions that demonstrate my skills and passion for development.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Projects Content -->
-    <section class="max-w-6xl mx-auto px-4 pb-20">
-        <!-- Featured Projects -->
-        <div class="mb-16">
-            <h2 class="text-heading mb-8 text-center">Featured Projects</h2>
-            
-            <!-- Slidev Theme Project -->
-            <div class="bear-card-elevated p-8 mb-12">
-                <div class="flex flex-col lg:flex-row gap-8">
-                    <div class="lg:w-2/3">
-                        <div class="mb-4">
-                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full">Vue.js</span>
-                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full ml-2">TypeScript</span>
-                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full ml-2">Slidev</span>
-                        </div>
-                        <h3 class="text-heading mb-4">TPM Branded Slidev Theme</h3>
-                        <p class="text-body text-white/70 mb-6">
-                            A custom presentation theme for Slidev (slides maker for developers) featuring TPM branding and design elements. 
-                            This theme provides consistent, professional presentation templates with custom layouts, styling, and branding 
-                            for technical presentations and training materials.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <h4 class="text-subheading text-bear-gold">Features:</h4>
-                            <ul class="space-y-2 text-body text-white/70">
-                                <li>• <strong>Custom Layouts</strong> - 15+ specialized slide layouts (cover, center, two-column, image layouts, etc.)</li>
-                                <li>• <strong>TPM Branding</strong> - Integrated company logos, colors, and design elements</li>
-                                <li>• <strong>Code Highlighting</strong> - Syntax highlighting for multiple programming languages</li>
-                                <li>• <strong>Responsive Design</strong> - Optimized for different screen sizes and presentations</li>
-                                <li>• <strong>Export Options</strong> - PDF export and web deployment capabilities</li>
-                            </ul>
-                        </div>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="{{ asset('downloads/slidev-theme-tpm') }}" download class="bear-button">
-                                Download Theme
-                            </a>
-                            <a href="{{ asset('downloads/slidev-theme-tpm/example-export.pdf') }}" target="_blank" class="bear-button-secondary">
-                                View Example PDF
-                            </a>
-                        </div>
+    <div class="pb-32">
+        <div class="technical-container">
+            <!-- Coming Soon Message -->
+            <div class="technical-section">
+                <div class="technical-specification text-center">
+                    <div class="mb-12">
+                        <svg class="w-24 h-24 mx-auto text-white/60 mb-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
                     </div>
-                    <div class="lg:w-1/3">
-                        <div class="bg-white/5 p-6 rounded-lg">
-                            <h4 class="text-subheading text-bear-gold mb-4">Technical Details</h4>
-                            <div class="space-y-3 text-body text-white/70">
-                                <div>
-                                    <span class="font-semibold">Framework:</span> Vue.js 3 + TypeScript
-                                </div>
-                                <div>
-                                    <span class="font-semibold">Platform:</span> Slidev (Node.js)
-                                </div>
-                                <div>
-                                    <span class="font-semibold">License:</span> Internal (TPM)
-                                </div>
-                                <div>
-                                    <span class="font-semibold">Size:</span> ~2.4MB (with assets)
-                                </div>
-                            </div>
-                        </div>
+                    <h2 class="text-technical-heading mb-8">Portfolio Coming Soon</h2>
+                    <p class="text-specification mb-12 max-w-3xl mx-auto">
+                        I'm currently preparing my project portfolio. Each project will showcase different technologies, 
+                        problem-solving approaches, and the development process behind the final product.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="{{ route('articles.index') }}" class="bear-button">
+                            Read My Blog
+                        </a>
+                        <a href="{{ route('contact.index') }}" class="bear-button-secondary">
+                            Discuss Collaboration
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Sudoku Game Project -->
-            <div class="bear-card-elevated p-8 mb-12">
-                <div class="flex flex-col lg:flex-row gap-8">
-                    <div class="lg:w-2/3">
+            <!-- Future Project Structure Preview -->
+            <div class="technical-section">
+                <div class="technical-section-header">
+                    <h2 class="text-technical-heading text-center">Project Preview</h2>
+                </div>
+                <div class="technical-grid">
+                    <!-- Sample Project Card 1 -->
+                    <div class="technical-card">
                         <div class="mb-4">
-                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full">PHP</span>
-                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full ml-2">JavaScript</span>
-                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full ml-2">jQuery</span>
+                            <span class="px-2 py-1 bg-white/10 rounded text-xs">Laravel</span>
+                            <span class="px-2 py-1 bg-white/10 rounded text-xs ml-2">Vue.js</span>
                         </div>
-                        <h3 class="text-heading mb-4">Interactive Sudoku Game</h3>
-                        <p class="text-body text-white/70 mb-6">
-                            A fully functional Sudoku game built with PHP and JavaScript. Features an interactive 9x9 grid 
-                            with intelligent puzzle generation, validation, and a user-friendly interface. Players can solve 
-                            puzzles with multiple difficulty levels and track their progress.
+                        <h3 class="text-technical-subheading mb-4">E-Commerce Platform</h3>
+                        <p class="text-specification mb-4">
+                            A full-stack e-commerce solution with advanced features, payment integration, and admin dashboard.
                         </p>
-                        <div class="space-y-3 mb-6">
-                            <h4 class="text-subheading text-bear-gold">Features:</h4>
-                            <ul class="space-y-2 text-body text-white/70">
-                                <li>• <strong>Interactive Grid</strong> - Click and right-click functionality for number placement</li>
-                                <li>• <strong>Puzzle Generation</strong> - Dynamic puzzle creation with varying difficulty levels</li>
-                                <li>• <strong>Real-time Validation</strong> - Instant feedback on number placement and conflicts</li>
-                                <li>• <strong>Responsive Design</strong> - Works seamlessly on desktop and mobile devices</li>
-                                <li>• <strong>Progress Tracking</strong> - Visual indicators for completed sections and rows</li>
-                            </ul>
-                        </div>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="{{ asset('sudoku/index.php') }}" target="_blank" class="bear-button">
-                                Play Sudoku Game
-                            </a>
-                            <a href="{{ route('contact.index') }}" class="bear-button-secondary">
-                                Request Custom Game
-                            </a>
-                        </div>
+                        <div class="text-sm text-white/60">Coming Soon</div>
                     </div>
-                    <div class="lg:w-1/3">
-                        <div class="bg-white/5 p-6 rounded-lg">
-                            <h4 class="text-subheading text-bear-gold mb-4">Technical Details</h4>
-                            <div class="space-y-3 text-body text-white/70">
-                                <div>
-                                    <span class="font-semibold">Backend:</span> PHP
-                                </div>
-                                <div>
-                                    <span class="font-semibold">Frontend:</span> JavaScript + jQuery
-                                </div>
-                                <div>
-                                    <span class="font-semibold">License:</span> MIT (Free to use)
-                                </div>
-                                <div>
-                                    <span class="font-semibold">Size:</span> ~21KB
-                                </div>
-                            </div>
+
+                    <!-- Sample Project Card 2 -->
+                    <div class="technical-card">
+                        <div class="mb-4">
+                            <span class="px-2 py-1 bg-white/10 rounded text-xs">React</span>
+                            <span class="px-2 py-1 bg-white/10 rounded text-xs ml-2">Node.js</span>
                         </div>
+                        <h3 class="text-technical-subheading mb-4">Task Management App</h3>
+                        <p class="text-specification mb-4">
+                            A collaborative project management tool with real-time updates and team collaboration features.
+                        </p>
+                        <div class="text-sm text-white/60">Coming Soon</div>
+                    </div>
+
+                    <!-- Sample Project Card 3 -->
+                    <div class="technical-card">
+                        <div class="mb-4">
+                            <span class="px-2 py-1 bg-white/10 rounded text-xs">Python</span>
+                            <span class="px-2 py-1 bg-white/10 rounded text-xs ml-2">Machine Learning</span>
+                        </div>
+                        <h3 class="text-technical-subheading mb-4">Data Analysis Dashboard</h3>
+                        <p class="text-specification mb-4">
+                            An interactive dashboard for visualizing complex datasets with machine learning insights.
+                        </p>
+                        <div class="text-sm text-white/60">Coming Soon</div>
                     </div>
                 </div>
             </div>
 
-            <!-- AutoHotkey Scripts Project -->
-            <div class="bear-card-elevated p-8">
-                <div class="flex flex-col lg:flex-row gap-8">
-                    <div class="lg:w-2/3">
-                        <div class="mb-4">
-                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full">AutoHotkey</span>
-                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full ml-2">Windows Automation</span>
-                            <span class="text-caption bg-white/10 px-3 py-1 rounded-full ml-2">Productivity</span>
+            <!-- Technology Stack Preview -->
+            <div class="technical-section">
+                <div class="technical-section-header">
+                    <h2 class="text-technical-heading text-center">Technologies I Work With</h2>
+                </div>
+                <div class="technical-grid">
+                    <div class="technical-card text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">🐘</span>
                         </div>
-                        <h3 class="text-heading mb-4">Windows Productivity Scripts</h3>
-                        <p class="text-body text-white/70 mb-6">
-                            A collection of AutoHotkey scripts designed to enhance Windows productivity and workflow efficiency. 
-                            These scripts automate repetitive tasks, provide quick access to common functions, and improve 
-                            the overall user experience on Windows systems.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <h4 class="text-subheading text-bear-gold">Scripts Included:</h4>
-                            <ul class="space-y-2 text-body text-white/70">
-                                <li>• <strong>Media Control.ahk</strong> - Quick media playback controls</li>
-                                <li>• <strong>Engineering Symbols.ahk</strong> - Fast insertion of engineering symbols</li>
-                                <li>• <strong>Greek Letters.ahk</strong> - Quick typing of Greek alphabet characters</li>
-                                <li>• <strong>Hidden Files.ahk</strong> - Toggle hidden file visibility</li>
-                                <li>• <strong>Win Scroll Volume.ahk</strong> - Volume control via mouse wheel</li>
-                            </ul>
-                        </div>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="{{ asset('downloads/Media Control.ahk') }}" download class="bear-button">
-                                Download Scripts
-                            </a>
-                            <a href="{{ route('contact.index') }}" class="bear-button-secondary">
-                                Request Custom Script
-                            </a>
-                        </div>
+                        <h3 class="text-technical-subheading mb-2">PHP/Laravel</h3>
+                        <p class="text-specification text-sm">Backend Development</p>
                     </div>
-                    <div class="lg:w-1/3">
-                        <div class="bg-white/5 p-6 rounded-lg">
-                            <h4 class="text-subheading text-bear-gold mb-4">Technical Details</h4>
-                            <div class="space-y-3 text-body text-white/70">
-                                <div>
-                                    <span class="font-semibold">Language:</span> AutoHotkey v1.1
-                                </div>
-                                <div>
-                                    <span class="font-semibold">Platform:</span> Windows 10/11
-                                </div>
-                                <div>
-                                    <span class="font-semibold">License:</span> MIT (Free to use)
-                                </div>
-                                <div>
-                                    <span class="font-semibold">Size:</span> ~3KB total
-                                </div>
-                            </div>
+                    <div class="technical-card text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">⚛️</span>
                         </div>
+                        <h3 class="text-technical-subheading mb-2">React/Vue.js</h3>
+                        <p class="text-specification text-sm">Frontend Frameworks</p>
+                    </div>
+                    <div class="technical-card text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">🎨</span>
+                        </div>
+                        <h3 class="text-technical-subheading mb-2">Tailwind CSS</h3>
+                        <p class="text-specification text-sm">Styling & Design</p>
+                    </div>
+                    <div class="technical-card text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">🐳</span>
+                        </div>
+                        <h3 class="text-technical-subheading mb-2">Docker</h3>
+                        <p class="text-specification text-sm">DevOps & Deployment</p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- More Projects Coming Soon -->
-        <div class="mt-16">
-            <h2 class="text-heading mb-8 text-center">More Projects Coming Soon</h2>
-            <div class="bear-card-elevated p-8 text-center">
-                <div class="mb-6">
-                    <svg class="w-16 h-16 mx-auto text-white/60 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                    </svg>
-                </div>
-                <h3 class="text-subheading mb-4">Portfolio in Development</h3>
-                <p class="text-body text-white/70 mb-6 max-w-2xl mx-auto">
-                    I'm actively working on documenting and showcasing more of my projects. Each project will include 
-                    detailed descriptions, technical challenges, and the development process behind the final product.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="{{ route('articles.index') }}" class="bear-button">
-                        Read My Blog
-                    </a>
-                    <a href="{{ route('contact.index') }}" class="bear-button-secondary">
-                        Discuss Collaboration
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Technology Stack Preview -->
-        <div class="mt-20">
-            <h2 class="text-heading text-center mb-12">Technologies I Work With</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-lg flex items-center justify-center">
-                        <span class="text-2xl">🐘</span>
-                    </div>
-                    <h3 class="text-subheading">PHP/Laravel</h3>
-                    <p class="text-caption">Backend Development</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-lg flex items-center justify-center">
-                        <span class="text-2xl">⚛️</span>
-                    </div>
-                    <h3 class="text-subheading">React/Vue.js</h3>
-                    <p class="text-caption">Frontend Frameworks</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-lg flex items-center justify-center">
-                        <span class="text-2xl">🎨</span>
-                    </div>
-                    <h3 class="text-subheading">Tailwind CSS</h3>
-                    <p class="text-caption">Styling & Design</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-lg flex items-center justify-center">
-                        <span class="text-2xl">🐳</span>
-                    </div>
-                    <h3 class="text-subheading">Docker</h3>
-                    <p class="text-caption">DevOps & Deployment</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 </div>
 @endsection
 
@@ -259,8 +138,8 @@
 <script>
     // Add fade-in animations for the cards and tech stack
     document.addEventListener('DOMContentLoaded', function() {
-        const cards = document.querySelectorAll('.bear-card');
-        const techItems = document.querySelectorAll('.grid > div');
+        const cards = document.querySelectorAll('.technical-card');
+        const techItems = document.querySelectorAll('.technical-grid > div');
         
         // Animate project cards
         cards.forEach((card, index) => {

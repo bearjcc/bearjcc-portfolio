@@ -37,26 +37,27 @@
     <!-- Main Content -->
     <div class="relative z-10">
         <!-- Header -->
-        <header class="sticky top-0 z-50 bg-black/20 backdrop-blur-sm border-b border-white/10">
-            <nav class="container mx-auto px-4 py-4">
+        <header id="header" class="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10 transition-all duration-300 shadow-lg">
+            <nav class="max-w-7xl mx-auto px-6 py-3">
                 <div class="flex items-center justify-between">
-                    <!-- Logo -->
+                    <!-- Logo - Hugs left side -->
                     <a href="{{ route('home') }}" class="flex items-center space-x-3 group">
-                        <img src="{{ asset('images/brand/bear-logo-32.svg') }}" alt="BearJCC Logo" class="w-8 h-8 transition-transform group-hover:scale-110">
-                        <span class="text-xl font-bold tracking-wider">BearJCC</span>
+                        <img id="logo" src="{{ asset('images/brand/bear-logo-32.svg') }}" alt="BearJCC Logo" class="w-8 h-8 transition-all duration-300 group-hover:scale-110 flex-shrink-0">
+                        <span id="logo-text" class="text-xl font-bold tracking-wider transition-all duration-300 text-white leading-none">BearJCC</span>
                     </a>
 
-                    <!-- Navigation Menu -->
-                    <div class="hidden md:flex items-center space-x-8">
-                        <a href="{{ route('home') }}" class="text-white/80 hover:text-white transition-colors">Home</a>
-                        <a href="{{ route('about') }}" class="text-white/80 hover:text-white transition-colors">About</a>
-                        <a href="{{ route('projects.index') }}" class="text-white/80 hover:text-white transition-colors">Projects</a>
-                        <a href="{{ route('articles.index') }}" class="text-white/80 hover:text-white transition-colors">Blog</a>
-                        <a href="{{ route('contact.index') }}" class="text-white/80 hover:text-white transition-colors">Contact</a>
+                    <!-- Navigation Menu - Hugs right side -->
+                    <div class="hidden md:flex items-center space-x-10">
+                        <a href="{{ route('home') }}" class="text-gray-300 hover:text-white transition-colors font-medium text-sm py-2 px-3 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">Home</a>
+                        <a href="{{ route('about') }}" class="text-gray-300 hover:text-white transition-colors font-medium text-sm py-2 px-3 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">About</a>
+                        <a href="{{ route('projects.index') }}" class="text-gray-300 hover:text-white transition-colors font-medium text-sm py-2 px-3 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">Projects</a>
+                        <a href="{{ route('articles.index') }}" class="text-gray-300 hover:text-white transition-colors font-medium text-sm py-2 px-3 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">Blog</a>
+                        <a href="{{ route('contact.index') }}" class="text-gray-300 hover:text-white transition-colors font-medium text-sm py-2 px-3 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">Contact</a>
+                        <a href="{{ route('components.showcase') }}" class="text-gray-300 hover:text-white transition-colors font-medium text-sm py-2 px-3 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300">Components</a>
                     </div>
 
                     <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="md:hidden text-white">
+                    <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white p-2 rounded-md hover:bg-white/10 transition-colors">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -64,30 +65,31 @@
                 </div>
 
                 <!-- Mobile Menu -->
-                <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-white/10">
-                    <div class="flex flex-col space-y-4 pt-4">
-                        <a href="{{ route('home') }}" class="text-white/80 hover:text-white transition-colors">Home</a>
-                        <a href="{{ route('about') }}" class="text-white/80 hover:text-white transition-colors">About</a>
-                        <a href="{{ route('projects.index') }}" class="text-white/80 hover:text-white transition-colors">Projects</a>
-                        <a href="{{ route('articles.index') }}" class="text-white/80 hover:text-white transition-colors">Blog</a>
-                        <a href="{{ route('contact.index') }}" class="text-white/80 hover:text-white transition-colors">Contact</a>
+                <div id="mobile-menu" class="md:hidden hidden mt-2 pb-2 border-t border-white/10">
+                    <div class="flex flex-col space-y-1 pt-2">
+                        <a href="{{ route('home') }}" class="text-gray-300 hover:text-white transition-colors py-2 px-3 rounded-md hover:bg-white/10 font-medium text-sm">Home</a>
+                        <a href="{{ route('about') }}" class="text-gray-300 hover:text-white transition-colors py-2 px-3 rounded-md hover:bg-white/10 font-medium text-sm">About</a>
+                        <a href="{{ route('projects.index') }}" class="text-gray-300 hover:text-white transition-colors py-2 px-3 rounded-md hover:bg-white/10 font-medium text-sm">Projects</a>
+                        <a href="{{ route('articles.index') }}" class="text-gray-300 hover:text-white transition-colors py-2 px-3 rounded-md hover:bg-white/10 font-medium text-sm">Blog</a>
+                        <a href="{{ route('contact.index') }}" class="text-gray-300 hover:text-white transition-colors py-2 px-3 rounded-md hover:bg-white/10 font-medium text-sm">Contact</a>
+                        <a href="{{ route('components.showcase') }}" class="text-gray-300 hover:text-white transition-colors py-2 px-3 rounded-md hover:bg-white/10 font-medium text-sm">Components</a>
                     </div>
                 </div>
             </nav>
         </header>
 
         <!-- Main Content -->
-        <main class="container mx-auto px-4 py-8">
+        <main class="w-full">
             @yield('content')
         </main>
 
         <!-- Footer -->
-        <footer class="bg-black/20 border-t border-white/10 mt-16">
-            <div class="container mx-auto px-4 py-8">
+        <footer class="bg-black/20 border-t border-white/10 mt-24">
+            <div class="max-w-7xl mx-auto px-6 py-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="flex items-center space-x-3 mb-4 md:mb-0">
-                        <img src="{{ asset('images/brand/bear-logo-16.svg') }}" alt="BearJCC Logo" class="w-6 h-6">
-                        <span class="text-lg font-bold">BearJCC</span>
+                    <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                        <img src="{{ asset('images/brand/bear-logo-16.svg') }}" alt="BearJCC Logo" class="w-5 h-5">
+                        <span class="text-base font-bold">BearJCC</span>
                     </div>
                     <div class="text-white/60 text-sm">
                         © {{ date('Y') }} BearJCC. All rights reserved.
@@ -116,6 +118,38 @@
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Scroll-based navbar expansion -->
+    <script>
+        let lastScrollTop = 0;
+        const header = document.getElementById('header');
+        const logo = document.getElementById('logo');
+        const logoText = document.getElementById('logo-text');
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                // Expanded state - more prominent
+                header.classList.add('py-4');
+                header.classList.remove('py-3');
+                logo.classList.remove('w-8', 'h-8');
+                logo.classList.add('w-10', 'h-10');
+                logoText.classList.remove('text-xl');
+                logoText.classList.add('text-2xl');
+            } else {
+                // Collapsed state - more compact
+                header.classList.remove('py-4');
+                header.classList.add('py-3');
+                logo.classList.remove('w-10', 'h-10');
+                logo.classList.add('w-8', 'h-8');
+                logoText.classList.remove('text-2xl');
+                logoText.classList.add('text-xl');
+            }
+            
+            lastScrollTop = scrollTop;
         });
     </script>
 

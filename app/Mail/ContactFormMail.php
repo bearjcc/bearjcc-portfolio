@@ -61,3 +61,4 @@ class ContactFormMail extends Mailable
         return [];
     }
 }
+

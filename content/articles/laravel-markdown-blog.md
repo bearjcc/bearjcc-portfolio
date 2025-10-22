@@ -147,3 +147,6 @@ The combination of Laravel's robust framework with markdown's simplicity creates
 ---
 
 *This article demonstrates the capabilities of the markdown blog system we've built. You can now write articles in markdown, add them to your Git repository, and they'll automatically appear on your website with full formatting, syntax highlighting, and interactive diagrams.*
+
+
+

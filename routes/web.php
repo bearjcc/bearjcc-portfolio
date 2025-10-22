@@ -24,3 +24,8 @@ Route::get('/blog/{article}', [ArticleController::class, 'show'])->name('article
 // Contact routes
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+// shadcn/ui Components Showcase
+Route::get('/components', function () {
+    return view('components.showcase');
+})->name('components.showcase');
